@@ -5,8 +5,6 @@ typedef struct Cell Cell;
 
 Cell *createCell();
 
-Cell *stacksCell(int len);
-
 void setNext(Cell *arg1, Cell *arg2);
 
 Cell *getNext(Cell *arg1);

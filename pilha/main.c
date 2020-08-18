@@ -6,7 +6,7 @@
 
 int main(){
     Stack *stack = createStack();
-    push(stack, 5);
+    stack = createFull(stack, 5);
     peek(stack);
     printf("\n");
     pop(stack);

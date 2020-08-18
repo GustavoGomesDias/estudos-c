@@ -17,9 +17,24 @@ Stack *createStack(){
     return stack;
 }
 
-void push(Stack *stack, int len){
-    stack->top = stacksCell(len);
-    stack->len = len;
+Stack *createFull(Stack* stack, int len){
+    int i;
+    for(i = 0; i < len; i++){
+        push(stack, len-i);
+    }
+    return stack;
+}
+
+void push(Stack *stack, int info){
+    Cell *tmp = createCell();
+    setInfo(tmp, info);
+    if (getTop(stack) != NULL){
+        setNext(tmp, getTop(stack));
+        setTop(stack, tmp);
+    }else{
+        setTop(stack, tmp);
+    }
+    setLenght(stack, (Size(stack) + 1));
 }
 
 void pop(Stack *stack){

@@ -5,7 +5,9 @@ typedef struct Stack Stack;
 
 Stack *createStack();
 
-void push(Stack *stack, int len);
+Stack *createFull(Stack* stack, int len);
+
+void push(Stack *stack, int info);
 
 void pop(Stack *stack);
 

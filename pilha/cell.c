@@ -14,29 +14,6 @@ Cell *createCell(){
     return newCell;
 }
 
-Cell *stacksCell(int len){
-    int i;
-    Cell *aux;
-    Cell *top;
-    for (i = 0; i < len; i++){
-        Cell *newCell = createCell();
-        setInfo(newCell, (len-i));
-        if (i == 0){
-            aux = newCell;
-            setNext(newCell, NULL);
-        }else{
-            setNext(newCell, aux);
-            aux = newCell;
-        }
-
-        if (i == (len-1)){
-            top = newCell;
-        }
-        
-    }
-    return top;
-}
-
 void setNext(Cell *arg1, Cell *arg2){
     arg1->next = arg2;
 }
