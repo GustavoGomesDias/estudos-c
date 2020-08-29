@@ -18,7 +18,7 @@ info_t getInfo(Cell *arg1){
     return arg1->num;
 }
 
-info_t setInfo(Cell *arg1, info_t info){
+void setInfo(Cell *arg1, info_t info){
     arg1->num = info;
 }
 
@@ -27,6 +27,6 @@ Cell *getNext(Cell *arg1){
     return arg1->next;
 }
 
-Cell *setNext(Cell *arg1, Cell *arg2){
+void setNext(Cell *arg1, Cell *arg2){
     arg1->next = arg2;
 }

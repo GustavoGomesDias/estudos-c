@@ -10,10 +10,10 @@ Cell *createCell();
 
 info_t getInfo(Cell *arg1);
 
-info_t setInfo(Cell *arg1, info_t info);
+void setInfo(Cell *arg1, info_t info);
 
 Cell *getNext(Cell *arg1);
 
-Cell *setNext(Cell *arg1, Cell *arg2);
+void setNext(Cell *arg1, Cell *arg2);
 
 #endif
